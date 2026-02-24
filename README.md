@@ -4,8 +4,44 @@
 
 BedRex provides real-time visibility into your Amazon Bedrock agent fleet — inventory, topology, CloudWatch metrics, cost analysis, and configuration tracking across multiple accounts and regions.
 
-![Agents Grid View](docs/agents-page-grid.png)
-![Agents Table View](docs/agents-page-table.png)
+---
+
+## Screenshots
+
+### Agent Inventory — Grid View
+Browse all your Bedrock agents across regions with filtering by status, model, region, and type. Each card shows action groups, knowledge bases, guardrail status, and 24h invocation counts.
+
+![Agents Grid View](docs/screenshots/agents-grid.png)
+
+### Agent Inventory — Table View
+Switch to a compact table layout with sortable columns. Click any row to open the detail drawer with full agent configuration, invoke capabilities, and snapshot history.
+
+![Agents Table View](docs/screenshots/agents-table.png)
+
+### Agent Detail Drawer
+Inspect individual agents — view action groups, knowledge bases, guardrail config, foundation model, and version history. Invoke agents directly with custom prompts and compare configuration snapshots.
+
+![Agent Detail](docs/screenshots/agent-detail.png)
+
+### Topology Map
+Interactive force-directed graph showing relationships between agents, action groups, knowledge bases, guardrails, and foundation models. Filter by node type, search nodes, and switch between layout directions.
+
+![Topology](docs/screenshots/topology.png)
+
+### Metrics Dashboard
+KPI summary bar with total/active agents, invocations, errors, and estimated daily cost. Includes model distribution chart, status breakdown, pricing tier comparison, and per-model cost projections.
+
+![Metrics Dashboard](docs/screenshots/metrics-dashboard.png)
+
+### Fleet Analytics & Cost Estimation
+Cost estimation table with projectable token volumes (1K–1M tokens/day), per-agent CloudWatch metrics with latency, error rates, and real cost data. Expandable rows with time-series sparklines.
+
+![Metrics Charts](docs/screenshots/metrics-charts.png)
+
+### Settings
+Configure AWS accounts, regions, and manage data sources. Add multiple accounts with cross-account IAM role support, manage cache settings, and toggle between live and mock data modes.
+
+![Settings](docs/screenshots/settings.png)
 
 ---
 
