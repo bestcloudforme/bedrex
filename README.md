@@ -38,11 +38,6 @@ Cost estimation table with projectable token volumes (1K–1M tokens/day), per-a
 
 ![Metrics Charts](docs/screenshots/metrics-charts.png)
 
-### Settings
-Configure AWS accounts, regions, and manage data sources. Add multiple accounts with cross-account IAM role support, manage cache settings, and toggle between live and mock data modes.
-
-![Settings](docs/screenshots/settings.png)
-
 ---
 
 ## Features
