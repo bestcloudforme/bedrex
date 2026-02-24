@@ -1,0 +1,12 @@
+node_modules
+.git
+.turbo
+dist
+*.tsbuildinfo
+.env
+.env.*
+coverage
+cdk.out
+docs
+infra
+.claude

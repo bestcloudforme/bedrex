@@ -1,0 +1,36 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: packages/backend/Dockerfile
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - AWS_REGION=${AWS_REGION:-us-east-1}
+      - AWS_ACCOUNT_ID=${AWS_ACCOUNT_ID:-}
+      - USE_MOCK_DATA=${USE_MOCK_DATA:-false}
+      - CORS_ORIGIN=http://localhost:${PORT:-3000}
+      - LOG_LEVEL=${LOG_LEVEL:-info}
+      - CACHE_ENABLED=${CACHE_ENABLED:-true}
+    volumes:
+      - ${HOME}/.aws:/root/.aws:ro
+    expose:
+      - "3001"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3001/api/health').then(r=>{if(!r.ok)throw 1})"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  frontend:
+    build:
+      context: .
+      dockerfile: packages/frontend/Dockerfile
+    ports:
+      - "${PORT:-3000}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped

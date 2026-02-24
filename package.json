@@ -1,0 +1,22 @@
+{
+  "name": "bedrex",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "infra"
+  ],
+  "scripts": {
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "test": "turbo test",
+    "lint": "turbo lint",
+    "clean": "turbo clean"
+  },
+  "devDependencies": {
+    "turbo": "^2.4.0",
+    "typescript": "^5.7.0"
+  },
+  "dependencies": {
+    "elkjs": "^0.11.0"
+  }
+}

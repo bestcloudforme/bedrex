@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.turbo/
+*.tsbuildinfo
+.env
+.env.local
+coverage/
+cdk.out/
+packages/backend/data/
